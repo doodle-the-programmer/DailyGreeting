@@ -1,0 +1,9 @@
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\bin\Debug\net6.0\DailyGreeting.deps.json
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\bin\Debug\net6.0\DailyGreeting.dll
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\obj\Debug\net6.0\DailyGreeting.csproj.AssemblyReference.cache
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\obj\Debug\net6.0\DailyGreeting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\obj\Debug\net6.0\DailyGreeting.AssemblyInfoInputs.cache
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\obj\Debug\net6.0\DailyGreeting.AssemblyInfo.cs
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\obj\Debug\net6.0\DailyGreeting.csproj.CoreCompileInputs.cache
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\obj\Debug\net6.0\DailyGreeting.dll
+C:\Users\gohpa\Desktop\Projects\MODDING\SV\DailyGreeting\DailyGreeting\bin\Debug\net6.0\messages.json
