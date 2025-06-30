@@ -1,8 +1,8 @@
 {
   "Name": "Daily Greeting",
   "Author": "doodle-the-programmer",
-  "Version": "1.0.1",
-  "Description": "It greets you everyday I guess.",
+  "Version": "1.0.2",
+  "Description": "It greets you everyday!",
   "UniqueID": "doodle-the-programmer.DailyGreeting",
   "EntryDll": "DailyGreeting.dll",
   "MinimumApiVersion": "4.0.0",

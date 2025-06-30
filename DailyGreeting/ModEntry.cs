@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -57,47 +58,57 @@ namespace DailyGreeting
             }
 
             string path = Path.Combine(this.Helper.DirectoryPath, "messages.json");
-            string[]? messages;
+            List<GreetingMessage>? messages;
             try
             {
                 using (StreamReader reader = new StreamReader(path))
                 {
                     string messagejson = reader.ReadToEnd();
-                    messages = JsonSerializer.Deserialize<string[]>(messagejson);
+                    messages = JsonSerializer.Deserialize<List<GreetingMessage>>(messagejson);
                 }
             }
             catch (Exception ex)
             {
                 this.Monitor.Log($"Error reading messages.json: {ex.Message}", LogLevel.Error);
-                messages = Array.Empty<string>();
+                messages = new List<GreetingMessage>();
             }
 
-            if (messages == null || messages.Length == 0)
+            if (messages == null || messages.Count == 0)
             {
                 this.Monitor.Log("No messages available to display.", LogLevel.Warn);
                 return;
             }
 
-            this.Monitor.Log("Loaded messages.json. Printing to log now:", LogLevel.Debug);
-            for (int i = 0; i < messages.Length; i++)
+            this.Monitor.Log("Loaded 'messages.json'. Printing to log now:", LogLevel.Debug);
+            for (int i = 0; i < messages.Count; i++)
             {
-                this.Monitor.Log($"Message {i}: {messages[i]}", LogLevel.Debug);
+                this.Monitor.Log($"Message {i}: {messages[i].text} (Likelihood: {messages[i].likelihood})", LogLevel.Debug);
             }
 
-            Random random = new Random();
-
-            if (Game1.player.isMarriedOrRoommates())
+            // Weighted random selection
+            int totalWeight = messages.Sum(m => m.likelihood);
+            int choice = new Random().Next(0, totalWeight);
+            int cumulative = 0;
+            GreetingMessage? selected = null;
+            foreach (var msg in messages)
             {
-                int randChanceInt = random.Next(0, 10);
-                if (randChanceInt == 1)
+                cumulative += msg.likelihood;
+                if (choice < cumulative)
                 {
-                    Game1.addHUDMessage(new HUDMessage($"{Game1.player.spouse} is a wonderful spouse! Wise choice."));
-                    return;
+                    selected = msg;
+                    break;
                 }
             }
-
-            int randInt = random.Next(0, messages.Length);
-            Game1.addHUDMessage(new HUDMessage($"Hi {Game1.player.displayName}! {messages[randInt]}", 1));
+            if (selected != null)
+            {
+                Game1.addHUDMessage(new HUDMessage($"Hey {Game1.player.displayName}! {selected.text}", 1));
+            }
         }
+    }
+
+    public class GreetingMessage
+    {
+        public string text { get; set; } = "";
+        public int likelihood { get; set; } = 1;
     }
 }

@@ -1,19 +1,70 @@
 [
-  "It's slime slaying time!",
-  "Have a great day!",
-  "Remember to water your crops!",
-  "Don't forget to visit the shop!",
-  "Explore the mines for treasures!",
-  "Check your mail for new quests!",
-  "Catch some fish for a tasty meal!",
-  "Make friends with the villagers!",
-  "Upgrade your tools for better efficiency!",
-  "Plant some new crops today!",
-  "Visit the beach for some relaxation!",
-  "Gather resources for crafting!",
-  "Cook a delicious meal for yourself!",
-  "Take a stroll through the forest!",
-  "Enjoy the beauty of nature!",
-  "Help out a neighbor in need!",
-  "Who will you choose?"
+  {
+    "text": "It's slime slaying time!",
+    "likelihood": 1
+  },
+  {
+    "text": "Have a great day!",
+    "likelihood": 2
+  },
+  {
+    "text": "Remember to water your crops!",
+    "likelihood": 3
+  },
+  {
+    "text": "Don't forget to visit the shop!",
+    "likelihood": 1
+  },
+  {
+    "text": "Explore the mines for treasures!",
+    "likelihood": 2
+  },
+  {
+    "text": "Check your mail for new quests!",
+    "likelihood": 1
+  },
+  {
+    "text": "Catch some fish for a tasty meal!",
+    "likelihood": 1
+  },
+  {
+    "text": "Make friends with the villagers!",
+    "likelihood": 2
+  },
+  {
+    "text": "Upgrade your tools for better efficiency!",
+    "likelihood": 1
+  },
+  {
+    "text": "Plant some new crops today!",
+    "likelihood": 2
+  },
+  {
+    "text": "Visit the beach for some relaxation!",
+    "likelihood": 1
+  },
+  {
+    "text": "Gather resources for crafting!",
+    "likelihood": 1
+  },
+  {
+    "text": "Cook a delicious meal for yourself!",
+    "likelihood": 1
+  },
+  {
+    "text": "Take a stroll through the forest!",
+    "likelihood": 1
+  },
+  {
+    "text": "Enjoy the beauty of nature!",
+    "likelihood": 1
+  },
+  {
+    "text": "Help out a neighbor in need!",
+    "likelihood": 1
+  },
+  {
+    "text": "Who will you choose?",
+    "likelihood": 1
+  }
 ]
